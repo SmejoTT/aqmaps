@@ -9,9 +9,12 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.mapbox.geojson.Feature;
+import com.mapbox.geojson.FeatureCollection;
 
 public class WebServer {
     
@@ -67,6 +70,14 @@ public class WebServer {
         Type listType = new TypeToken<ArrayList<AirQualitySensor>>() {}.getType();
         ArrayList<AirQualitySensor> aqSensorList = new Gson().fromJson(jsonString, listType);
         return aqSensorList;
+    }
+    
+    public List<Feature> getNoFlyZones() {
+        var url = serverUrl+"buildings/no-fly-zones.geojson";
+        var jsonString = getDataAt(url);
+        var featureCollection = FeatureCollection.fromJson(jsonString);
+        var noFlyZones = featureCollection.features();
+        return noFlyZones;
     }
     
 }
