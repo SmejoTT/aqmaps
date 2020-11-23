@@ -40,6 +40,10 @@ public class Drone {
     public double getReadingRange() {
         return READING_RANGE;
     }
+    
+    public double getMoveDistance() {
+        return MOVE_DISTANCE;
+    }
 
     public void move(int degrees) {
         var angle = Math.toRadians(degrees);
@@ -48,5 +52,4 @@ public class Drone {
         var latStep = Math.sin(angle)*(MOVE_DISTANCE);
         this.latitude = this.latitude+latStep;    
     }
-
 }
