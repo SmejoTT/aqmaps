@@ -36,6 +36,10 @@ public class Drone {
         coordinates[1]= latitude;
         return coordinates;
     }
+    
+    public double getReadingRange() {
+        return READING_RANGE;
+    }
 
     public void move(int degrees) {
         var angle = Math.toRadians(degrees);
