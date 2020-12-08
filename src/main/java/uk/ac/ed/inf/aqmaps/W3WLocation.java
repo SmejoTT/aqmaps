@@ -1,5 +1,7 @@
 package uk.ac.ed.inf.aqmaps;
 
+import com.mapbox.geojson.Point;
+
 public class W3WLocation {
     private Coordinates coordinates;
     
@@ -11,10 +13,8 @@ public class W3WLocation {
         private double lng;
         private double lat;
         
-        public double[] toArray() {
-            var coordinates = new double[2];
-            coordinates[0]=lng;
-            coordinates[1]=lat;
+        public Point asPoint() {
+            var coordinates = Point.fromLngLat(lng, lat);
             return coordinates;
         }
     }
