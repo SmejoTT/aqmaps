@@ -1,14 +1,16 @@
 package uk.ac.ed.inf.aqmaps;
 
+import com.mapbox.geojson.Point;
+
 public class AirQualitySensor {
     private String location;
     private double battery;
     private String reading;
-    private double[] coordinates;
-    public double[] getCoordinates() {
+    private Point coordinates;
+    public Point getCoordinates() {
         return coordinates;
     }
-    public void setCoordinates(double[] coordinates) {
+    public void setCoordinates(Point coordinates) {
         this.coordinates = coordinates;
     }
     public String getLocation() {
@@ -20,6 +22,4 @@ public class AirQualitySensor {
     public String getReading() {
         return reading;
     }
-    
-    
 }
