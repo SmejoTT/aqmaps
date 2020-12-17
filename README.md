@@ -31,8 +31,8 @@ Then the information about the What3Words location is fetched from webserver a p
 Lastly, the list of no-fly zones is fetched and parsed.
 
 ## Drone flight
-At the start, the drone receives start position, a list of 33 sensors that need to be visited and a list of no-fly zones. Then the drone utilizes its Pathfinder object that orders sensors
-in a more optimal order for visiting. After this, the drone starts to visit sensors and collect readings, after visiting the last sensor drone returns to start location.
+At the start, the drone receives start position, a list of 33 sensors that need to be visited and a list of no-fly zones. Then the drone utilizes its *Pathfinder* object that orders sensors
+in a more optimal order for visiting. After this, the drone starts to visit sensors and collect readings. The drone finds the path between sensors again by using *Pathfinder* object. After visiting the last sensor drone returns to start location.
 
 ## Air quality map
 Readings collected by the drone are evaluated in *App* class and output as a GeoJSON file that can be visualised e.g. at http://geojson.io/
