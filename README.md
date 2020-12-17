@@ -24,14 +24,14 @@ Example of the air quality map
 - have a **reading value**
 - have a reading range of **0.0002** degrees
         
-## Fetching of the data
-Fetching of data is done in *WebServer* class by using Java's HTTP Client.
-At first, is fetched list of sensors that need to be read. This list is then parsed to list of *AirQualitySenor* objects.
+## Fetching the data
+Fetching is done in *WebServer* class by using Java's HTTP Client.
+At first, a list of sensors that need to be read is fetched. This list is then parsed to a list of *AirQualitySenor* objects.
 Then the information about the What3Words location is fetched from webserver a parsed to longitude and latitude format.
 Lastly, the list of no-fly zones is fetched and parsed.
 
 ## Drone flight
-At the start, the drone receives start position, list of 33 sensors that need to be visited and a list of no-fly zones. Then the drone utilizes its Pathfinder object that orders sensors
+At the start, the drone receives start position, a list of 33 sensors that need to be visited and a list of no-fly zones. Then the drone utilizes its Pathfinder object that orders sensors
 in a more optimal order for visiting. After this, the drone starts to visit sensors and collect readings, after visiting the last sensor drone returns to start location.
 
 ## Air quality map
@@ -40,9 +40,9 @@ Readings collected by the drone are evaluated in *App* class and output as a Geo
 ## Handling of edge cases
 - If the drone makes 150 moves it stops at its location and prints it to the console. 
 - If the reading fails the involved sensor is moved to the end of the list of unvisited sensors so the drone can try to make reading at the end of the flight.
-- If sensor's battery level is less than 10 then the reading value can not be trusted. The sensor is marked with X.
+- If the sensor's battery level is less than 10 then the reading value can not be trusted. The sensor is marked with X.
 
 ## Build and run
 - Package the project to a .jar by using maven build.
-- Run the jar file with these command line attributes : day month year startLatitude startLogitude seed port
-- day - DD , month - MM, year - YYYY, startLatitude and startLongitude in bounded area, seed is not used, port - port of the webserver
+- Run the .jar file with these command-line attributes: day month year startLatitude startLogitude seed port
+- day - DD, month - MM, year - YYYY, startLatitude and startLongitude in the bounded area, seed is not used, port - port of the webserver
