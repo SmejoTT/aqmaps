@@ -37,4 +37,7 @@ Readings collected by the drone are evaluated in *App* class and output as a Geo
 - If the drone makes 150 moves it stops at its location and prints it to the console. 
 - If the reading fails the involved sensor is moved to the end of the list of unvisited sensors so the drone can try to make reading at the end of the flight.
 
-**Project can be packaged to a .jar by using maven build.**
+## Build and run
+- Package the project to a .jar by using maven build.
+- Run the jar file with these command line attributes : day month year startLatitude startLogitude seed port
+- day - DD , month - MM, year - YYYY, startLatitude and startLongitude in bounded area, seed is not used, port - port of the webserver
