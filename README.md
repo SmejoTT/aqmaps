@@ -4,6 +4,8 @@
 This project was a part of university coursework where was needed to programme a software prototype that would fetch input data from the webserver,
 use drone to collect sensor readings and output the air quality map.
 
+https://user-images.githubusercontent.com/47607423/102545027-9946b580-40ad-11eb-9f19-f43e5106bfd2.PNG
+
 ## Drone
 - **longitude** and **latitude** is used to determine coordinates
 - can move in an arbitrary direction (in multiples of **10** degrees) between **0 - 350** degrees, by convention, **0º** means EAST, **90º** means NORTH, **180º** means WEST,
