@@ -4,7 +4,9 @@
 This project was a part of university coursework where was needed to programme a software prototype that would fetch input data from the webserver,
 use drone to collect sensor readings and output the air quality map.
 
-https://user-images.githubusercontent.com/47607423/102545027-9946b580-40ad-11eb-9f19-f43e5106bfd2.PNG
+Example of the air quality map
+
+![preview](https://user-images.githubusercontent.com/47607423/102548237-47545e80-40b2-11eb-9411-4ecbea31f70f.png)
 
 ## Drone
 - **longitude** and **latitude** is used to determine coordinates
@@ -38,6 +40,7 @@ Readings collected by the drone are evaluated in *App* class and output as a Geo
 ## Handling of edge cases
 - If the drone makes 150 moves it stops at its location and prints it to the console. 
 - If the reading fails the involved sensor is moved to the end of the list of unvisited sensors so the drone can try to make reading at the end of the flight.
+- If sensor's battery level is less than 10 then the reading value can not be trusted. The sensor is marked with X.
 
 ## Build and run
 - Package the project to a .jar by using maven build.
