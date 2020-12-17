@@ -1,5 +1,5 @@
 # Drone control system and air quality map
-**(Java 11, HTTP Client, Mapbox GeoJSON SDK, Maven)**
+**Java 11, HTTP Client, Mapbox GeoJSON SDK, Maven**
 
 This project was a part of university coursework where was needed to programme a software prototype that would fetch input data from the webserver,
 use drone to collect sensor readings and output the air quality map in a GeoJSON format.
