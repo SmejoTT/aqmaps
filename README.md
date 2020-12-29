@@ -42,6 +42,14 @@ Readings collected by the drone are evaluated in *App* class and output as a Geo
 - If the reading fails the involved sensor is moved to the end of the list of unvisited sensors so the drone can try to make reading at the end of the flight.
 - If the sensor's battery level is less than 10 then the reading value can not be trusted. The sensor is marked with X.
 
+## Server
+-not included
+
+Strucutre:
+- buildings/no-fly-zones.geojson
+- maps/*YYYY*/*MM*/*DD*/air-quality-data.json
+- words/*word1*/*word2*/*word3*/details.json
+
 ## Build and run
 - Package the project to a .jar by using maven build.
 - Run the .jar file with these command-line attributes: day month year startLatitude startLogitude seed port
