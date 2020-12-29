@@ -54,4 +54,4 @@ Strucutre:
 - Package the project to a .jar by using maven build.
 - Run the webserver with the required data
 - Run the .jar file with these command-line attributes: day month year startLatitude startLogitude seed port
-- day - DD, month - MM, year - YYYY, startLatitude and startLongitude in the bounded area, seed is not used, port - port of the webserver
+- day - DD, month - MM, year - YYYY, startLatitude and startLongitude in the bounded area, seed is not used(use whatever value), port - port of the webserver
